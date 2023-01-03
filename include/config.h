@@ -12,6 +12,7 @@
     #define SERIAL_SPEED (115200)
 
     #define DEBUG_WIFI   (1)
+    #define DEBUG_ALEXA  (1)
 #endif
 
 

@@ -38,6 +38,7 @@ bool JAL_WIFI_CONNECT(char* SSID, char* PWD){
     *| 2. conexión a la red almacenada
     */
     dbg.print(" Conectando al Wifi...\n");
+    WiFi.mode(WIFI_STA);
     WiFi.begin(SSID, PWD);
 
     /* 2.2 Esperar a aque se conecte o se pase el timeout */
