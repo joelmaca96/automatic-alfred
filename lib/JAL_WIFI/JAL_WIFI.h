@@ -18,5 +18,6 @@ bool JAL_WIFI_CONNECT(char* SSID, char* PWD);
 void JAL_WIFI_PRINT_INFO();
 bool JAL_WIFI_STOP();
 void JAL_WIFI_SCAN();
+bool JAL_WIFI_CHECK_CONNECTION();
 
 #endif

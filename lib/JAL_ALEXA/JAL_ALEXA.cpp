@@ -25,7 +25,7 @@ bool JAL_ALEXA_INIT(alexaItem* _p_st_alexaItems, uint8_t _u8_numberOfItems){
         st_alexaItems[u8_i].u8_gpio = _p_st_alexaItems[u8_i].u8_gpio;
 
         pinMode(_p_st_alexaItems[u8_i].u8_gpio, OUTPUT);
-        digitalWrite(_p_st_alexaItems[u8_i].u8_gpio, LOW);
+        digitalWrite(_p_st_alexaItems[u8_i].u8_gpio, HIGH);
     }
 
     /* 3. Configurar el callback */
@@ -34,7 +34,7 @@ bool JAL_ALEXA_INIT(alexaItem* _p_st_alexaItems, uint8_t _u8_numberOfItems){
 
         for(uint8_t u8_i;u8_i < u8_numberOfItems;u8_i ++){
             if ( (strcmp(device_name, st_alexaItems[u8_i].s_activationName.c_str()) == 0) ){
-                digitalWrite(st_alexaItems[u8_i].u8_gpio, state);
+                digitalWrite(st_alexaItems[u8_i].u8_gpio, !state);
             }
         }
 

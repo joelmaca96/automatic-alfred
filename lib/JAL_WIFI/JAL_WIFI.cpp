@@ -113,4 +113,10 @@ void JAL_WIFI_SCAN(){
     Serial.println("");
 }
 
+bool JAL_WIFI_CHECK_CONNECTION(){
+   if(WiFi.status() == WL_CONNECTED) return true;
+
+    return false;
+}
+
 

@@ -11,6 +11,7 @@
 #include "JAL_DEBUG.h"
 #include "JAL_WIFI.h"
 #include "JAL_ALEXA.h"
+#include "JAL_RTC.h"
 
 void setup() {
   /*
@@ -25,21 +26,24 @@ void setup() {
   JAL_WIFI_CONNECT(MY_SSID, MY_PASSWD);
   JAL_WIFI_PRINT_INFO();
 
+  /* 1.3 Módulo RTC */
+  JAL_RTC_SYNC();
+
   /* 
   *| 2. Configuracion de Alexa
   */
 
   /* 2.1 Creacion de los dispositivos fisicos, añadir los necesarios*/
-  alexaItem st_Escritorio1 = {
-    .s_activationName = "escritorio uno",
-    .u8_gpio = 5
+  alexaItem st_pantalla = {
+    .s_activationName = "pantalla",
+    .u8_gpio = 26
   };
 
-  alexaItem st_Escritorio2 = {
-    .s_activationName = "escritorio dos",
-    .u8_gpio = 6
+  alexaItem st_balda = {
+    .s_activationName = "balda",
+    .u8_gpio = 27
   };
-  alexaItem s_dispositivos[2] = {st_Escritorio1, st_Escritorio2};
+  alexaItem s_dispositivos[2] = {st_pantalla, st_balda};
 
   /* 2.2 Inicialización del módulo*/
   JAL_ALEXA_INIT(s_dispositivos,2);
@@ -48,4 +52,5 @@ void setup() {
 void loop() {
   /* Loop del modulo de alexa */
   JAL_ALEXA_LOOP();
+
 }

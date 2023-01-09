@@ -13,6 +13,7 @@
 
     #define DEBUG_WIFI   (1)
     #define DEBUG_ALEXA  (1)
+    #define DEBUG_RTC    (1)
 #endif
 
 
