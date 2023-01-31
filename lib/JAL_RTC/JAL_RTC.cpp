@@ -1,9 +1,13 @@
+/********************* INCLUDES ***********************/
 #include "JAL_RTC.h"
 #include <NTPClient.h>
 #include <WiFiUdp.h>
-JAL_DEBUG dbg_rtc("[RTC]", DEBUG_RTC);
+#include "ESP32Time.h"
 
+/********************* GLOBALS ***********************/
+JAL_DEBUG dbg_rtc("[RTC]", DEBUG_RTC);
 ESP32Time s_rtc;
+
 /******************* PUBLIC METHODS ********************/
 void  JAL_RTC_INIT(){
 

@@ -5,7 +5,6 @@
 /********************* INCLUDES ***********************/
 #include "../../include/config.h"
 #include "Arduino.h"
-#include "ESP32Time.h"
 
 /* Joel Hal */
 #include "JAL_RTC.h"

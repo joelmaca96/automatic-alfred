@@ -16,6 +16,9 @@
     #define DEBUG_RTC    (1)
 #endif
 
+//Device type
+#define MASTER (0)
+#define SLAVE  (1)
 
 
 #endif
